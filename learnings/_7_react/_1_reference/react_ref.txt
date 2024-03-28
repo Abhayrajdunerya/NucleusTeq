@@ -1,0 +1,2 @@
+[1] React Router -> https://youtube.com/playlist?list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG&si=BfCc8RXcm5m8HQ7D
+[2] React Query -> https://youtube.com/playlist?list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2&si=9iDCstASsgyG6_e1
