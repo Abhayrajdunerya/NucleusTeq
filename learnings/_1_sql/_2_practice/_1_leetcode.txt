@@ -415,19 +415,78 @@ LIMIT 1
 
 44. https://leetcode.com/problems/fix-names-in-a-table/description/?envType=study-plan-v2&envId=top-sql-50
 
+SELECT 
+    user_id,
+    CONCAT(
+        UPPER(SUBSTRING(name, 1, 1)),
+        LOWER(SUBSTRING(name, 2))
+    ) AS name
+FROM Users
+ORDER BY user_id
+
 45. https://leetcode.com/problems/patients-with-a-condition/?envType=study-plan-v2&envId=top-sql-50
+
+SELECT patient_id, patient_name, conditions
+FROM Patients
+WHERE conditions LIKE('DIAB1%') 
+OR conditions LIKE('% DIAB1%')
 
 46. https://leetcode.com/problems/delete-duplicate-emails/?envType=study-plan-v2&envId=top-sql-50
 
+DELETE FROM Person
+WHERE id NOT IN (
+    SELECT id AS temp
+    FROM (
+        SELECT MIN(id) AS id
+        FROM Person
+        GROUP BY email
+    ) AS temp
+)
+
+
+
 47. https://leetcode.com/problems/second-highest-salary/?envType=study-plan-v2&envId=top-sql-50
+
+SELECT (
+    SELECT 
+    DISTINCT salary AS SecondHighestSalary
+    FROM Employee
+    ORDER By salary DESC
+    LIMIT 1 OFFSET 1
+) AS SecondHighestSalary
 
 48. https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&envId=top-sql-50
 
+SELECT
+    sell_date,
+    COUNT(DISTINCT product) AS num_sold,
+    GROUP_CONCAT(
+        DISTINCT product ORDER BY product ASC
+    ) AS products
+FROM Activities
+GROUP BY sell_date
+ORDER BY sell_date
+
 49. https://leetcode.com/problems/list-the-products-ordered-in-a-period/description/?envType=study-plan-v2&envId=top-sql-50
+
+SELECT
+    p.product_name,
+    SUM(o.unit) AS unit
+FROM Products p 
+JOIN Orders o ON p.product_id = o.product_id
+AND YEAR(o.order_date) = 2020
+AND MONTH(o.order_date) = 2
+GROUP BY product_name
+HAVING SUM(o.unit) >= 100
 
 50. https://leetcode.com/problems/find-users-with-valid-e-mails/description/?envType=study-plan-v2&envId=top-sql-50
 
-
+SELECT 
+    user_id,
+    name,
+    mail
+FROM Users
+WHERE mail REGEXP '^[a-zA-Z][a-zA-Z0-9_.-]*@leetcode[.]com$'
 
 
 
