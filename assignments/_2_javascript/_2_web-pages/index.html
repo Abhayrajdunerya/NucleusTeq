@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Login</title>
+</head>
+<body>
+    <form id="login-form">
+        <h1 class="login-heading">Login</h1>
+        <hr>
+        <div class="form-group">
+            <div id="err-username" class="err-msg"></div>
+            <input id="username" class="form-input form-child" type="text" placeholder="Username" required>
+            <div id="err-password" class="err-msg"></div>
+            <input id="password" class="form-input form-child" type="text" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required >
+            <a href="#" class="forget-pass form-child">Forget Password?</a>
+            <button id="login-btn" class="form-child" type="button">Login</button>
+            <div class="form-extra form-child">Not a Member ? <a href="#">Signup</a></div>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>

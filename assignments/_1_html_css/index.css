@@ -1,0 +1,91 @@
+body {
+    background  : linear-gradient(to bottom right, blue, red) no-repeat center center/cover;
+    height: 100vh;
+    width: auto;
+    /* overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    width: 70%;
+    max-width: 26rem;   
+    min-width: 20rem;
+}
+
+.login-heading {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 2px solid;
+    padding: 0.3rem;
+    font-size: large;
+    outline: none;
+}
+
+.form-child {
+    margin-bottom: 2rem;
+}
+
+#login-btn {
+    border: 2px solid;
+    font-size: medium;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+/* .login-btn:hover {
+    background-color: rgba(132, 131, 131, 0.84);
+} */
+
+.form-extra {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.forget-pass {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* sm */
+@media (min-width: 640px) {
+    
+}
+
+/* md */
+@media (min-width: 768px) {
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+}
+
+/* xl */
+@media (min-width: 1280px) {
+
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+
+}

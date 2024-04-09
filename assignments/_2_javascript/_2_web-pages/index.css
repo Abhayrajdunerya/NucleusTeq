@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-.login-form {
+#login-form {
     background-color: #fff;
     border-radius: 0.5rem;
     width: 70%;
@@ -41,7 +41,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.login-btn {
+#login-btn {
     border: 2px solid;
     font-size: medium;
     font-weight: bolder;
