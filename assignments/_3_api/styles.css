@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(to right bottom, #2800ff, #c800c3, #fc0081, #ff0045, #ff0000);
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#post-list {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #fffc;
+
+    box-shadow: 0px 1px 6px 0px rgba(93,91,125,1);
+    max-width: 20rem;
+
+    
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
