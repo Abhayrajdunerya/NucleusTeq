@@ -1,5 +1,7 @@
 body {
-    background-image: linear-gradient(to right bottom, #2800ff, #c800c3, #fc0081, #ff0045, #ff0000);
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-color: #3F72AF;
+    color: #112D4E;
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
@@ -32,7 +34,7 @@ body {
 }
 
 #timer {
-    background-color: #FFFF;
+    background-color: #DBE2EF;
     padding: 1rem 1.7rem;
     border-radius: 10rem;
     font-weight: 600;
@@ -40,6 +42,11 @@ body {
 
 select {
     padding: 0.5rem;
+    background-color: #F9F7F7;
+    color: #112D4E;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
 }
 
 .btn {
@@ -49,19 +56,27 @@ select {
     border-radius: 10rem;
     border: none;
     cursor: pointer;
-    background-color: #FFFF;
+    /* background-color: #DBE2EF;
+    color: #112D4E;
+    box-shadow: 0px 1px 2px 0px #112D4E; */
+
+    color: #DBE2EF;
+    background-color: #112D4E;
 }
 
-button:hover {
+.btn:hover {
     background-color: whitesmoke;
+    transition: all 0.2s;
+    background-color: #DBE2EF;
+    color: #112D4E;
 }
 
 
 /* quiz area styling */
 
 #quiz-area {
-    background-color: #FFFF;
-    min-width: 50%;
+    background-color: #DBE2EF;
+    box-shadow: 0px 1px 2px 0px #112D4E;
     min-height: 20vh;
     border-radius: 1rem;
     display: flex;
@@ -84,23 +99,27 @@ button:hover {
 /* option styling */
 
 #options-area {
+    color: #112D4E;
     display: flex;
     flex-direction: column;
-    text-align: left;
     padding: 2rem;
     gap: 1rem;
 }
 
 .option {
     text-align: left;
-    background-color: #FFF;
-    border: 1px solid gray;
+    background-color: #F9F7F7;
     padding: 0.5rem;
     cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    color: #112D4E;
+    transition: all 0.2s;
 }
 
 .option:hover:not([disabled]) {
-    background-color: whitesmoke;
+    background-color: #112D4E;
+    color: #F9F7F7;
 }
 
 .option:disabled {
@@ -108,14 +127,22 @@ button:hover {
 }
 
 .correct-option {
-    background-color: rgba(196, 255, 196, 0.436);
-    border: 1px solid green;
-    color: green;
+    background-color: #03ab3f42;
+    border: 1px solid #004100;
+    color: #004100;
 }
 
 .incorrect-option {
-    background-color: rgba(255, 196, 196, 0.436);
-    border: 1px solid rgb(255, 0, 0);
-    color: red;
+    background-color: #82000036;
+    border: 1px solid #820000;
+    color: #820000;
+}
+
+/* sm */
+@media (min-width: 640px) {
+    #quiz-area {
+        max-width: 50%;
+        min-width: 25rem;
+    }
 }
 
