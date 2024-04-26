@@ -1,0 +1,121 @@
+body {
+    background-image: linear-gradient(to right bottom, #2800ff, #c800c3, #fc0081, #ff0045, #ff0000);
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-red {
+    color: red;
+}
+
+.font-large {
+    font-size: xx-large;
+}
+
+#timer {
+    background-color: #FFFF;
+    padding: 1rem 1.7rem;
+    border-radius: 10rem;
+    font-weight: 600;
+}
+
+select {
+    padding: 0.5rem;
+}
+
+.btn {
+    padding: 0.7rem 1.7rem;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    background-color: #FFFF;
+}
+
+button:hover {
+    background-color: whitesmoke;
+}
+
+
+/* quiz area styling */
+
+#quiz-area {
+    background-color: #FFFF;
+    min-width: 50%;
+    min-height: 20vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+#question-area {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(142, 142, 142, 0.842);
+}
+
+#question {
+    font-size: medium;
+    margin: 0;
+}
+
+
+/* option styling */
+
+#options-area {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.option {
+    text-align: left;
+    background-color: #FFF;
+    border: 1px solid gray;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.option:hover:not([disabled]) {
+    background-color: whitesmoke;
+}
+
+.option:disabled {
+    cursor: no-drop;
+}
+
+.correct-option {
+    background-color: rgba(196, 255, 196, 0.436);
+    border: 1px solid green;
+    color: green;
+}
+
+.incorrect-option {
+    background-color: rgba(255, 196, 196, 0.436);
+    border: 1px solid rgb(255, 0, 0);
+    color: red;
+}
+
