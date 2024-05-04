@@ -41,9 +41,13 @@ const init = () => {
         difficultyElement.appendChild(option);
     })
 
-    const date = new Date();
+    const today = new Date();
 
-    const dateStr =  `${date.getDate()} / ${date.getMonth()} / ${date.getFullYear()}`
+    const date = today.getDate();
+    const month = today.toLocaleString('default', { month: 'short' });
+    const year = today.getFullYear();
+
+    const dateStr =  `${date} ${month} ${year}`
 
     timerElement.innerHTML = dateStr;
 
@@ -72,7 +76,7 @@ const startCountdown = () => {
         }
 
         if (timeRemaining >= 0) {
-            timerElement.innerHTML = `${timeRemaining} sec left`;
+            timerElement.innerHTML = `${timeRemaining} sec left | Total questions ${questionsData.allQuestions.length}`;
         } else {
             clearInterval(countdownInterval);
             handleNextButton();
@@ -83,7 +87,7 @@ const startCountdown = () => {
 const resetState = () => {
     showLoading(false);
     nextBtn.style.display = 'none';
-    timerElement.innerHTML = `15 sec left`
+    timerElement.innerHTML = `15 sec left | Total questions ${questionsData.allQuestions.length}`
     while (optionsElement.firstChild) {
         optionsElement.removeChild(optionsElement.firstChild);
     }
@@ -117,7 +121,7 @@ const showQuestion = () => {
     resetState();
     const currQuestion = questionsData.allQuestions[currQuestIndex];
     const questionNo = currQuestIndex + 1;
-    questionElement.innerHTML = questionNo + '. ' + currQuestion.question;
+    questionElement.innerHTML = 'Q' + questionNo + '. ' + currQuestion.question;
 
     const incorrect_answers = currQuestion.incorrect_answers;
     const correct_answer = currQuestion.correct_answer;
@@ -157,7 +161,22 @@ const startQuiz = async (url) => {
 const showScore = () => {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questionsData.allQuestions.length}!`
-    optionsElement.innerHTML = '🚩'
+
+    let message = '';
+
+    const scorePercent = Math.round((score/questionsData.allQuestions.length)*100);
+
+    if (scorePercent >= 80) {
+        message = `Excellent! 🚩`
+    } else if (scorePercent < 80 && scorePercent >= 60) {
+        message = `Good job! 👍`
+    } else {
+        message = `You need to improve! `
+    }
+
+    console.log({scorePercent});
+
+    optionsElement.innerHTML = message;
     optionsElement.classList.add('text-center');
     optionsElement.classList.add('font-large')
     nextBtn.innerHTML = 'Play Again'
@@ -171,7 +190,7 @@ const handleNextButton = () => {
     } else {
         showScore();
         clearInterval(countdownInterval); // Stop the countdown
-        timerElement.innerHTML = `Yay! you have completed the quiz`
+        timerElement.innerHTML = `Yay! you have completed the quiz 😊`
         questionElement.classList.add('text-center')
     }
 }
