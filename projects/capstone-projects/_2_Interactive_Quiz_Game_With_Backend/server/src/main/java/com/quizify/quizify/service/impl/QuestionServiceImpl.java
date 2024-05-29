@@ -66,6 +66,19 @@ public class QuestionServiceImpl implements IQuestionService {
 
     }
 
+    @Override
+    public String saveQuestions(List<QuestionDto> questionDtoList) {
+        List<Question> questions = new ArrayList<>();
+
+        questionDtoList.forEach(questionDto -> {
+            questions.add(QuestionMapper.mapToQuestion(questionDto, new Question()));
+        });
+
+        List<Question> savedQuestions = questionRepository.saveAll(questions);
+
+        return savedQuestions.size() + " questions are added";
+    }
+
     private List<Question> getRandomQuestions(List<Question> questions, Integer amount) {
         List<Question> randomQuestions = new ArrayList<>();
         Set<Long> selectedQuestionIds = new HashSet<>();

@@ -25,7 +25,7 @@ public class QuestionMapper {
         question.setCorrectAnswer(questionDto.getCorrectAnswer());
         question.setType(questionDto.getType());
         question.setDifficulty(questionDto.getDifficulty());
-//        question.setOptions(questionDto.getOptions());
+        question.setOptionsList(questionDto.getOptions());
         question.setCategoryId(questionDto.getCategoryId());
 
         return question;

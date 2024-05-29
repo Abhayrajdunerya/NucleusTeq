@@ -172,12 +172,17 @@ const showQuestion = () => {
 
 const startQuiz = async (url) => {
     showLoading(true);
-    const questionResponse = await fetchQuestions(url);
-    const allQuestions = await questionResponse;
 
-    questionsData.allQuestions = allQuestions;
+    try {
+        const questionResponse = await fetchQuestions(url);
+        const allQuestions = await questionResponse;
+        questionsData.allQuestions = allQuestions;
+        showQuestion();
+    } catch (error) {
+        alert('Failed to load questions!');
+        console.log(error);
+    }
 
-    showQuestion();
 }
 
 const showScore = () => {
@@ -188,13 +193,20 @@ const showScore = () => {
 
     const scorePercent = Math.round((score/questionsData.allQuestions.length)*100);
 
-    if (scorePercent >= 80) {
-        message = `Excellent! 🚩`
-    } else if (scorePercent < 80 && scorePercent >= 60) {
-        message = `Good job! 👍`
+    if (scorePercent >= 90) {
+        message = `Outstanding! 🌟 You're a quiz master!`
+    } else if (scorePercent >= 80) {
+        message = `Excellent! 🚩 Keep up the great work!`
+    } else if (scorePercent >= 70) {
+        message = `Great job! 👏 You're doing well!`
+    } else if (scorePercent >= 60) {
+        message = `Good job! 👍 Keep pushing!`
+    } else if (scorePercent >= 50) {
+        message = `Not bad! 😊 You can do even better!`
     } else {
-        message = `You need to improve! `
+        message = `You need to improve! 💪 Don't give up!`
     }
+    
 
     console.log({scorePercent});
 
@@ -221,10 +233,9 @@ nextBtn.addEventListener('click', () => {
     if (questionsData.allQuestions.length === 0) {
         const selectedCategory = categoryElement.value;
         const selectedDifficulty = difficultyElement.value;
-        const questionCount = 10;
 
         console.log({selectedCategory, selectedDifficulty});
-        const url = `${baseURL}?amount=${questionCount}&categoryId=${selectedCategory}&difficulty=${selectedDifficulty}`
+        const url = `${baseURL}?categoryId=${selectedCategory}&difficulty=${selectedDifficulty}`
         
         startQuiz(url);
 
