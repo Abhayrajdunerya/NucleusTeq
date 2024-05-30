@@ -1,7 +1,7 @@
 
-# Interactive Quiz Game with API Integration
+# Interactive Quiz Game
 
-A quiz game where users can answer questions fetched from an external API.
+A quiz game where users can answer questions fetched from an API.
 The game will display questions one by one, allow users to select answers, and provide
 feedback on their performance.
 
