@@ -4,6 +4,7 @@ import com.quizify.quizify.constants.QuizConstants;
 import com.quizify.quizify.dto.QuestionDto;
 import com.quizify.quizify.dto.ResponseDto;
 import com.quizify.quizify.service.IQuestionService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,7 +37,7 @@ public class QuestionController {
     }
 
     @PostMapping("/questions")
-    public ResponseEntity<ResponseDto> saveQuestions(@RequestBody List<QuestionDto> questionDtoList) {
+    public ResponseEntity<ResponseDto> saveQuestions(@Valid @RequestBody List<QuestionDto> questionDtoList) {
 
         String message = iQuestionService.saveQuestions(questionDtoList);
         return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(QuizConstants.STATUS_201, QuizConstants.MESSAGE_201));
