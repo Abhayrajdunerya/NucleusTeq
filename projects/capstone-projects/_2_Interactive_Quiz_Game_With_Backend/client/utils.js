@@ -8,7 +8,9 @@ export const fetchQuestions = async (url) => {
 
         return response;
     } catch (error) {
+        window.alert("Failed to load questions!")
         console.log(error);
+        window.location.reload();
     }
 }
 
@@ -22,6 +24,7 @@ export const fetchCategories = async () => {
 
         return response;
     } catch (error) {
+        window.alert("Failed to load categories!")
         console.log(error);
     }
 }

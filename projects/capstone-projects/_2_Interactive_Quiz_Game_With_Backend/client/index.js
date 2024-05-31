@@ -23,8 +23,13 @@ const questionsData = {
 }
 
 const loadCategories = async () => {
-    const categories = await fetchCategories();
-    categoryData.allCategories = await categories;
+
+    try {
+        const categories = await fetchCategories();
+        categoryData.allCategories = await categories;
+    } catch (error) {
+        console.log(error);
+    }
 
     const defaultOption = document.createElement('option');
     defaultOption.text = 'Any Category';
@@ -179,7 +184,6 @@ const startQuiz = async (url) => {
         questionsData.allQuestions = allQuestions;
         showQuestion();
     } catch (error) {
-        alert('Failed to load questions!');
         console.log(error);
     }
 

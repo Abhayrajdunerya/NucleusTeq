@@ -48,9 +48,7 @@ Step 3: Open index.html file in Vs Code.
 
 Step 4: Click on Go Live button.
 
-Step 5: Please make sure your live server is running on "http://127.0.0.1:5500/" (It's important due to cors policy)
-
-Step 6: Now the frontend will be running on "http://127.0.0.1:5500/"
+Step 5: Now the frontend will be running on "http://127.0.0.1:5500/"
 
 ### Backend
 #### Create Database Schema in MySQL version 5.7.8 or higher
