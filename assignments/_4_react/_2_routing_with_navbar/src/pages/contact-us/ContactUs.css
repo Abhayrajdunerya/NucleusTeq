@@ -1,0 +1,110 @@
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header {
+    padding-top: 3rem;
+    text-align: center;
+    max-width: 30rem;
+    line-height: 1rem;
+}
+
+.contact-form {
+    width: 60%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* width: 100%; */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.502);
+    resize: none;
+    font-size: medium;
+    outline: none;
+    border: none;
+    background-color: rgba(201, 201, 201, 0.34);;
+}
+
+.input-field {
+    width: 100%;
+}
+
+button {
+    width: min-content;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #454545f5;
+    border-radius: 10rem;
+}
+
+button:hover {
+    background-color: rgba(34, 34, 34, 0.95);
+    transition: all 0.4s;
+}
+
+.contact-info {
+    margin: 3rem 0rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.map {
+    position: relative;
+    width: 50%;
+}
+
+.contact-wraper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    color: black;
+    width: 100%;
+    max-width: 25rem;
+}
+
+.contact-list li {
+    color: black;
+}
+
+.contact-details {
+    /* border: 1px solid rgba(128, 128, 128, 0.573); */
+    border-radius: 1rem;
+    display: flex;
+    color: black;
+    background-color: rgba(201, 201, 201, 0.34);
+    padding: 0rem 1rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.contact-us h2 {
+    margin-top: 5rem;
+}

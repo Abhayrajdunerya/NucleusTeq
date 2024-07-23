@@ -1,0 +1,68 @@
+.home-pg {
+    /* background-color: blue; */
+    
+
+}
+
+.home-app {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    
+    background-color: rgba(201, 201, 201, 0.34);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.counter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background-color: rgb(65, 65, 65);
+    color: #FFF;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 600;
+}
+
+.counter-btn:hover {
+    background-color: rgba(65, 65, 65, 0.728);
+    transition: all 0.4s;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-app {
+    /* margin-top: 10rem; */
+}
+
+/* .user-app h2 {
+    margin-bottom: 5rem;
+    text-align: center;
+} */
+
+.tooltip-app {
+    position: relative;
+}
+
+.tooltip-hover {
+    position: relative;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}

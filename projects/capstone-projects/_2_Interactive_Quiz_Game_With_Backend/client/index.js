@@ -148,6 +148,12 @@ const selectAnswer = (e) => {
 const showQuestion = () => {
     resetState();
     console.log(questionsData);
+    if (!questionsData.allQuestions.length) {
+        window.alert("We don't have questions for this category.\nPlease select another category");
+        window.location.reload();
+    }
+
+
     const currQuestion = questionsData.allQuestions[currQuestIndex];
     const questionNo = currQuestIndex + 1;
     questionElement.innerHTML = 'Q' + questionNo + '. ' + currQuestion.question;

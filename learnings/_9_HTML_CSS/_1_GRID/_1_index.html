@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        color: #fff;
+        text-align: center;
+    }
+    #content {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-rows: 200px 300px 400px 200px; */
+        /* grid-auto-rows: minmax(200px, auto); */
+        /* grid-column-gap: 10px; */
+        /* grid-row-gap: 10px; */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, minmax(200px, auto));
+        grid-gap: 10px;
+
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    #content div {
+        background: #3bbced;
+        padding: 30px;
+    }
+    #content div:nth-child(even) {
+        background: #777;
+    }
+</style>
+
+<body>
+    <div id="content">
+
+        <div class="">1</div>
+        <div class="">2</div>
+        <div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iusto. Quia est distinctio reprehenderit dicta molestiae accusantium beatae quos nobis libero, aperiam, recusandae laboriosam tempore iusto voluptatem illum quibusdam repudiandae!</div>
+        <div class="">4</div>
+        <div class="">5</div>
+        <div class="">6</div>
+        <div class="">7</div>
+        <div class="">8</div>
+        <div class="">9</div>
+
+    </div>
+</body>
+
+
+</html>

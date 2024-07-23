@@ -25,7 +25,7 @@ public class QuestionServiceImpl implements IQuestionService {
             amount = 10;
         }
 
-        if (categoryId == 0) {
+        if (categoryId != null && categoryId == 0) {
             categoryId = null;
         }
 

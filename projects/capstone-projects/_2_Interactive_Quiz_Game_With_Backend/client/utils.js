@@ -8,7 +8,7 @@ export const fetchQuestions = async (url) => {
 
         return response;
     } catch (error) {
-        window.alert("Failed to load questions!")
+        window.alert("Failed to load questions! Please try again later")
         console.log(error);
         window.location.reload();
     }

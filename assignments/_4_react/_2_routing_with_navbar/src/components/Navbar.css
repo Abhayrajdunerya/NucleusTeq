@@ -1,0 +1,48 @@
+.navbar-cmp {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    position: fixed;
+    justify-content: space-between;
+    background: #FFF;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.568);
+    background-color: rgba(34, 34, 34, 0.95);
+    color: #FFF;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.logo span {
+    font-size: x-large;
+    margin-left: 0.5rem;
+}
+
+.nav-links {
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style: none;
+    font-size: large;
+    padding: 1rem 0rem;
+    color: #FFF;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
